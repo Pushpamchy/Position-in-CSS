@@ -1,0 +1,52 @@
+<!-- In CSS, the z-index property is used to control the stacking order of positioned elements. When elements overlap on a web page, the z-index property determines which element appears on top of the others. Elements with a higher z-index value are displayed on top of elements with a lower z-index value.
+
+Here's how it works:
+
+Default Stacking Order:
+
+Elements are rendered in the order they appear in the HTML document. Elements defined later in the document are drawn on top of elements defined earlier.
+Positioned Elements:
+
+The z-index property only affects positioned elements. Elements with a position value other than static (which is the default) can have a z-index value applied.
+Z-Index Values:
+
+z-index values can be positive, negative, or zero.
+Elements with a higher z-index are stacked above elements with lower z-index.
+If two elements have the same z-index, the stacking order is determined by their position in the HTML document.
+Here's an example of how you might use the z-index property in CSS: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .e1 {
+                position: absolute;
+                z-index: 1;
+                height: 30px;
+                width: 30px;
+                border: 2px solid black;
+            }
+            .e2 {
+                height: 30px;
+                width: 30px;
+                border: 2px solid black;
+            }
+            .e3 {
+                position: absolute;
+                z-index: 1;
+                height: 30px;
+                width: 30px;
+                border: 2px solid black;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="e1">1</div>
+        <div class="e2">2</div>
+        <div class="e3">3</div>
+    </div>
+</body>
+</html>
